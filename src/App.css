@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600;700&family=Red+Rose:wght@400;500;600;700&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container
+{
+    background: linear-gradient(to right, rgb(20, 20, 20), rgba(35, 35, 35, 0.919));
+    color: white;
+    padding:5rem 15vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.logo, span
+{
+    font-size: 2.5rem;
+    font-family: 'Red Rose', cursive;
+    color: skyblue;
+}
+span
+{
+    color: rgb(255, 145, 0);
+}
+.search
+{
+    margin: 1rem 0;
+}
+
+.search input
+{
+    width: 400px;
+    font-size: 1.25rem;
+    padding: .5rem;
+    background: transparent;
+    backdrop-filter: blur(5px);
+    color: white;
+
+}
+.search input:active
+{
+    outline: none;
+}
+
+button
+{
+    padding: .5rem 1.25rem;
+    font-size: 1.25rem;
+    background: skyblue;
+    border: 2px solid skyblue;
+}
+.movieContainer
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+
+.movieCard 
+{
+    width: 250px;
+    height: 350px;
+    position: relative;
+    margin: 2rem ;
+    overflow: hidden;
+    cursor: pointer;
+}
+.movieCard img 
+{
+    width: 250px;
+    height: 350px;
+    object-fit: cover;
+}
+
+.year{
+    position: absolute;
+    top: -150px;
+    left: 0;
+    width: 100%;
+    padding: .85rem;
+    background-color: rgba(0, 0, 0, 0.688);
+    transition: all .45s ease-in-out;
+}
+.movieDetails
+{
+    position: absolute;
+    bottom: -150px;
+    padding: 1rem;
+    width: 87%;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: all .5s ease-in-out;
+}
+.movieCard:hover .movieDetails
+{
+    bottom: 0;
+}
+.movieCard:hover .year
+{
+    top: 0;
+}
